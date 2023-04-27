@@ -4,7 +4,13 @@ class Chat {
   constructor() {
     this.mainContainer = document.createElement("div");
     this.mainContainer.classList.add("main_container");
+    this.logo = document.createElement("div");
+    this.logo.innerHTML = '<h1>Welcome! Ask this magic ball the question you would like an answer to.</h1>';
+    this.logo.classList.add("logo");
+    document.body.appendChild(this.logo);
     document.body.appendChild(this.mainContainer);
+     
+    
 
     this.form = new Form(this.mainContainer);
     this.ball = new Ball(this.mainContainer);
