@@ -114,3 +114,6 @@ body {
 input {
   background: -webkit-linear-gradient(180deg, #5400c7, #9c0ec4, #fb7743);
 }
+input::placeholder {
+  color: rgb(31, 28, 28);
+}

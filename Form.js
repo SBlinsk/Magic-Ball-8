@@ -19,7 +19,7 @@ class Form {
   }
 
   onSubmit(event) {
-    event.preventDefault();
+    this.chatWindow.scrollTop = this.chatWindow.scrollHeight - this.chatWindow.clientHeight;
     let value = this.input.getValue();
     const message = new ChatMessage("You: " + value, this.chatWindow);
     message.init();

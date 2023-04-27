@@ -4,6 +4,7 @@ class Input {
     this.input = document.createElement("input");
     this.input.setAttribute("type", "text");
     this.input.setAttribute("name", "input");
+    this.input.setAttribute("placeholder", "Put your question here =)");
     this.input.classList.add("input");
     this.parent.appendChild(this.input);
   }

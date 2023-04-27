@@ -39,14 +39,28 @@ class Chat {
   activateChat() {
     const formElement = this.form.getFormElement();
     formElement.addEventListener("submit", async (event) => {
-      this.form.onSubmit(event);
-      const answerMessage = new ChatMessage(
-        await this.answer.answerOn(),
-        this.chatWindow
-      );
-      answerMessage.init();
+      event.preventDefault();
+      if (!event.target.input.value) {
+        this.chatWindow.appendChild(showNoMessageEror());
+        this.chatWindow.scrollTop =
+          this.chatWindow.scrollHeight - this.chatWindow.clientHeight;
+      } else {
+        event.target.elements.FormButton.disabled = true;
+        this.form.onSubmit(event);
+        const answerMessage = new ChatMessage(
+          await this.answer.answerOn(),
+          this.chatWindow
+        );
+        answerMessage.init();
+        event.target.elements.FormButton.disabled = false;
+      }
     });
   }
+}
+function showNoMessageEror() {
+  const errorMessage = document.createElement("div");
+  errorMessage.textContent = "Magic Ball: You didn't ask enything!=)";
+  return errorMessage;
 }
 
 const chat = new Chat();
