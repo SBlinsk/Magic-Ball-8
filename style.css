@@ -1,0 +1,130 @@
+.main_container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 10%;
+}
+.chatWindow {
+  width: 250px;
+  height: 250px;
+  border: 1px solid black;
+  overflow-y: auto;
+}
+.input {
+  width: 198px;
+}
+
+.ball_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  width: 250px;
+  height: 250px;
+}
+.ball {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at 5% 5%, #666, #222 50%), #222;
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+  /* animation: move 2s linear infinite; */
+}
+
+.ball_window {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  border: 5px solid rgb(110, 106, 106);
+}
+
+.ball_deactivated {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+}
+.ball_deactivated::before {
+  content: "8";
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.ball_activated {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: rgb(2, 2, 2);
+  border: 5px solid rgb(110, 106, 106);
+  overflow: hidden;
+}
+.triangle {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-left: 50px solid;
+  border-right: 50px solid;
+  border-bottom: 60px solid #9d4edd;
+  /* overflow: hidden; */
+  position: relative;
+}
+/* .content {
+  position: absolute;
+  top: 20px;
+  left: -45px;
+  right: -45px;
+  bottom: 0;
+  overflow: auto;
+  color: white;
+  background-color: #15b100;
+}   */
+
+.content {
+  overflow: hidden;
+  font-size: 10px;
+  position: absolute;
+  top: 29px;
+  left: -25px;
+  width: 50px;
+  height: 30px;
+  background-color: #9d4edd(128, 0, 102);
+  word-wrap: break-word;
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.content::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5%);
+  }
+  50% {
+    transform: translateX(+5%);
+  }
+  75% {
+    transform: translateX(0);
+  }
+}
+.move-animation {
+  animation: move 1s linear infinite;
+}
+body {
+  background: -webkit-linear-gradient(180deg, #5400c7,#9c0ec4,#fb7743);
+
+
+}
+
+input {
+  background: -webkit-linear-gradient(180deg, #5400c7,#9c0ec4,#fb7743);
+}
