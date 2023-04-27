@@ -73,6 +73,7 @@
 }
 
 .content {
+  text-align: center;
   overflow: hidden;
   font-size: 10px;
   position: absolute;
