@@ -20,9 +20,9 @@ class ChatBot {
     this.ball.deactivateAnimation();
     const answer =this.answers[randomIndex];
     this.ball.activatedView(answer);
-    console.log(answer)
+    console.log(answer);
 
-    // this.ball.classList.add('triangle');
+    
 
     return "Magic Ball: " + answer;
   }
