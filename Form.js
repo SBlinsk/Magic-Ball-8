@@ -12,7 +12,6 @@ class Form {
     this.chatWindow.classList.add("chatWindow");
     this.chatWindow.dataset.atribute = "chatWindow";
     this.mainContainer.classList.add("main_container");
-    // this.input.element.setAttribute("placeholder", "Wright your question here");
 
     this.parent.appendChild(this.ChatContainer);
     this.ChatContainer.appendChild(this.chatWindow);

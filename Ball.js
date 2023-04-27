@@ -11,7 +11,6 @@ class Ball {
     this.ball.classList.add("ball");
     this.ballWindow.classList.add("ball_window");
     this.ballWindow.classList.add("ball_deactivated");
-    // this.triangle.classList.add("triangle");
     this.contentWindow.classList.add("content");
 
     this.parent.appendChild(this.container);
