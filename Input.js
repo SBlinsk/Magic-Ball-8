@@ -8,7 +8,9 @@ class Input {
     this.input.classList.add("input");
     this.parent.appendChild(this.input);
   }
-
+  focus() {
+    this.input.focus();
+  }
   getValue() {
     return this.input.value;
   }

@@ -14,14 +14,17 @@ class Form {
     this.parent.appendChild(this.ChatContainer);
     this.ChatContainer.appendChild(this.chatWindow);
     this.ChatContainer.appendChild(this.formElement);
+    this.input.focus();
   }
 
   onSubmit(event) {
-    this.chatWindow.scrollTop = this.chatWindow.scrollHeight - this.chatWindow.clientHeight;
+    this.chatWindow.scrollTop =
+      this.chatWindow.scrollHeight - this.chatWindow.clientHeight;
     let value = this.input.getValue();
     const message = new ChatMessage("You: " + value, this.chatWindow);
     message.init();
     this.input.clear();
+    this.input.focus();
   }
 
   getFormElement() {
