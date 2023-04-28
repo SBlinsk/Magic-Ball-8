@@ -33,4 +33,13 @@ class Ball {
     this.triangle.appendChild(this.contentWindow);
     this.contentWindow.textContent = answer;
   }
+  deacivatedView() {
+    this.ballWindow.classList.add("ball_deactivated");
+    this.ballWindow.classList.remove("ball_activated");
+
+    if (this.triangle.classList.contains("triangle")) {
+      this.triangle.classList.remove("triangle");
+      this.triangle.removeChild(this.contentWindow);
+    }
+  }
 }
