@@ -11,7 +11,6 @@ class Ball {
     this.ball.classList.add("ball");
     this.ballWindow.classList.add("ball_window");
     this.ballWindow.classList.add("ball_deactivated");
-    // this.triangle.classList.add("triangle");
     this.contentWindow.classList.add("content");
 
     this.parent.appendChild(this.container);
@@ -33,5 +32,14 @@ class Ball {
     this.triangle.classList.add("triangle");
     this.triangle.appendChild(this.contentWindow);
     this.contentWindow.textContent = answer;
+  }
+  deacivatedView() {
+    this.ballWindow.classList.add("ball_deactivated");
+    this.ballWindow.classList.remove("ball_activated");
+
+    if (this.triangle.classList.contains("triangle")) {
+      this.triangle.classList.remove("triangle");
+      this.triangle.removeChild(this.contentWindow);
+    }
   }
 }
