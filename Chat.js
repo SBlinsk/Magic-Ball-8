@@ -51,14 +51,14 @@ class Chat {
         this.chatWindow.scrollTop =
           this.chatWindow.scrollHeight - this.chatWindow.clientHeight;
       } else {
-        event.target.elements.FormButton.disabled = true;
+        this.form.button.button.disabled = true;
         this.form.onSubmit(event);
         const answerMessage = new ChatMessage(
           await this.answer.answerOn(),
           this.chatWindow
         );
         answerMessage.init();
-        event.target.elements.FormButton.disabled = false;
+        this.form.button.button.disabled = false;
       }
     });
   }
